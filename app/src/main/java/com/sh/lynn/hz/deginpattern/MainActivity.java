@@ -21,8 +21,53 @@ public class MainActivity extends AppCompatActivity {
      */
     @OnClick(R.id.button)
     public void onClickSingletonPattern(){
-    Intent intent = new Intent(this,PatternActivity.class);
-    intent.putExtra("Pattern","SingletonBean.java");
-    startActivity(intent);
+        Intent intent = new Intent(this,PatternActivity.class);
+        intent.putExtra("Pattern","SingletonBean.java");
+        intent.putExtra("Title","单例模式");
+        startActivity(intent);
+    }
+
+    /**
+     * 工厂模式
+     */
+    @OnClick(R.id.button2)
+    public void onClickFactoryPattern(){
+        Intent intent = new Intent(this,PatternActivity.class);
+        intent.putExtra("Pattern","FactoryPattern.java");
+        intent.putExtra("Title","工厂模式");
+        startActivity(intent);
+    }
+
+    /**
+     * 模板方法模式
+     */
+    @OnClick(R.id.button4)
+    public void onClickTemplateMethodPattern(){
+        Intent intent = new Intent(this,PatternActivity.class);
+        intent.putExtra("Pattern","TemplateMethodPattern.java");
+        intent.putExtra("Title","模板方法模式");
+        startActivity(intent);
+    }
+
+    /**
+     * 建造者模式
+     */
+    @OnClick(R.id.button3)
+    public void onClickBuildPattern(){
+        Intent intent = new Intent(this,PatternActivity.class);
+        intent.putExtra("Pattern","BuilderPattern.java");
+        intent.putExtra("Title","建造者模式");
+        startActivity(intent);
+    }
+
+    /**
+     * 建造者模式
+     */
+    @OnClick(R.id.button5)
+    public void onClickProxyPattern(){
+        Intent intent = new Intent(this,PatternActivity.class);
+        intent.putExtra("Pattern","ProxyPattern.java");
+        intent.putExtra("Title","代理模式");
+        startActivity(intent);
     }
 }
