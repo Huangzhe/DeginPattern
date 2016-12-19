@@ -61,13 +61,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 建造者模式
+     * 代理模式
      */
     @OnClick(R.id.button5)
     public void onClickProxyPattern(){
         Intent intent = new Intent(this,PatternActivity.class);
         intent.putExtra("Pattern","ProxyPattern.java");
         intent.putExtra("Title","代理模式");
+        startActivity(intent);
+    }
+
+    /**
+     * 原型模式
+     */
+    @OnClick(R.id.button6)
+    public void onClickPrototypePattern(){
+        Intent intent = new Intent(this,PatternActivity.class);
+        intent.putExtra("Pattern","PrototypePattern.java");
+        intent.putExtra("Title","原型模式");
         startActivity(intent);
     }
 }

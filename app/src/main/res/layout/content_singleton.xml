@@ -42,6 +42,22 @@
             android:layout_height="wrap_content"/>
 
     </HorizontalScrollView>
-
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="运行"
+                android:id="@+id/btn_excu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_result"
+            android:text="代码运行结果:"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_purple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
