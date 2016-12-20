@@ -81,4 +81,15 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("Title","原型模式");
         startActivity(intent);
     }
+
+    /**
+     * 原型模式
+     */
+    @OnClick(R.id.button7)
+    public void onClickMediatorPattern(){
+        Intent intent = new Intent(this,PatternActivity.class);
+        intent.putExtra("Pattern","MediatorPattern.java");
+        intent.putExtra("Title","中介者模式");
+        startActivity(intent);
+    }
 }
