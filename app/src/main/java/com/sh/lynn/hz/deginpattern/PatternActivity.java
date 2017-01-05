@@ -6,6 +6,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
+import com.sh.lynn.hz.deginpattern.chainpattern.ChainPattern;
+import com.sh.lynn.hz.deginpattern.commandpattern.CommandPattern;
 import com.sh.lynn.hz.deginpattern.prototype.PrototypePattern;
 
 import butterknife.BindView;
@@ -18,6 +20,7 @@ public class PatternActivity extends AppCompatActivity {
     @BindView(R.id.tv_result)
     TextView tv_result;
     String pattern;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,20 +38,32 @@ public class PatternActivity extends AppCompatActivity {
         });
         ButterKnife.bind(this);
 
-         pattern = getIntent().getStringExtra("Pattern");
+        pattern = getIntent().getStringExtra("Pattern");
         String title = getIntent().getStringExtra("Title");
         toolbar.setTitle(title);
-        tv_text.setText(Utils.getTextFromAssert(this,pattern));
+        tv_text.setText(Utils.getTextFromAssert(this, pattern));
     }
+
     @OnClick(R.id.btn_excu)
-    public void excu(){
-        switch (pattern){
+    public void excu() {
+        switch (pattern) {
             case "PrototypePattern.java":
                 PrototypePattern pattern = new PrototypePattern();
-                String text =  pattern.getCloneText();
+                String text = pattern.getCloneText();
                 String text2 = pattern.getCloneTextDeep();
-                tv_result.setText("浅拷贝："+text+"\n"+"深拷贝："+text2);
-                tv_result.setHeight(2*80);
+                tv_result.setText("浅拷贝：" + text + "\n" + "深拷贝：" + text2);
+                tv_result.setHeight(2 * 80);
+                break;
+            case "CommandPattern.java":
+                CommandPattern commandPattern = new CommandPattern();
+
+                tv_result.setText(commandPattern.doSomething());
+                tv_result.setHeight(2 * 80);
+                break;
+            case "ChainPattern.java":
+                ChainPattern chainPattern = new ChainPattern();
+                tv_result.setText(chainPattern.doSomething());
+                tv_result.setHeight(3 * 80);
                 break;
         }
 

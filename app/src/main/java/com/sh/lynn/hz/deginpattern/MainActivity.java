@@ -83,13 +83,34 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 原型模式
+     * 中介者模式
      */
     @OnClick(R.id.button7)
     public void onClickMediatorPattern(){
         Intent intent = new Intent(this,PatternActivity.class);
         intent.putExtra("Pattern","MediatorPattern.java");
         intent.putExtra("Title","中介者模式");
+        startActivity(intent);
+    }
+    /**
+     * 命令模式
+     */
+    @OnClick(R.id.button8)
+    public void onClickCommandPattern(){
+        Intent intent = new Intent(this,PatternActivity.class);
+        intent.putExtra("Pattern","CommandPattern.java");
+        intent.putExtra("Title","命令模式");
+        startActivity(intent);
+    }
+
+    /**
+     * 责任链模式
+     */
+    @OnClick(R.id.button9)
+    public void onClickChainPattern(){
+        Intent intent = new Intent(this,PatternActivity.class);
+        intent.putExtra("Pattern","ChainPattern.java");
+        intent.putExtra("Title","责任链模式");
         startActivity(intent);
     }
 }
