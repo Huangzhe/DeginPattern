@@ -37,10 +37,10 @@ public class PrototypePattern {
     public class PrototypeDemo implements Cloneable {
         private ArrayList<String> mArrayList = new ArrayList<>();
         @Override
-        public com.sh.lynn.hz.deginpattern.prototype.PrototypeDemo clone() throws CloneNotSupportedException {
-            com.sh.lynn.hz.deginpattern.prototype.PrototypeDemo paper =null;
+        public com.sh.lynn.hz.deginpattern.prototypepattern.PrototypeDemo clone() throws CloneNotSupportedException {
+            com.sh.lynn.hz.deginpattern.prototypepattern.PrototypeDemo paper =null;
             try{
-                paper =(com.sh.lynn.hz.deginpattern.prototype.PrototypeDemo)  super.clone();
+                paper =(com.sh.lynn.hz.deginpattern.prototypepattern.PrototypeDemo)  super.clone();
             }catch (Exception e){
                 e.printStackTrace();
             }
@@ -79,10 +79,10 @@ public class PrototypeDemoDeep implements Cloneable {
 
     private ArrayList<String> mArrayList = new ArrayList<>();
     @Override
-    public com.sh.lynn.hz.deginpattern.prototype.PrototypeDemoDeep clone() throws CloneNotSupportedException {
-        com.sh.lynn.hz.deginpattern.prototype.PrototypeDemoDeep paper =null;
+    public com.sh.lynn.hz.deginpattern.prototypepattern.PrototypeDemoDeep clone() throws CloneNotSupportedException {
+        com.sh.lynn.hz.deginpattern.prototypepattern.PrototypeDemoDeep paper =null;
         try{
-            paper =(com.sh.lynn.hz.deginpattern.prototype.PrototypeDemoDeep)  super.clone();
+            paper =(com.sh.lynn.hz.deginpattern.prototypepattern.PrototypeDemoDeep)  super.clone();
             paper.mArrayList =(ArrayList<String>)this.mArrayList.clone();
         }catch (Exception e){
             e.printStackTrace();

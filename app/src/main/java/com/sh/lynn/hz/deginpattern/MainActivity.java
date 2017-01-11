@@ -1,8 +1,8 @@
 package com.sh.lynn.hz.deginpattern;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -21,10 +21,7 @@ public class MainActivity extends AppCompatActivity {
      */
     @OnClick(R.id.button)
     public void onClickSingletonPattern(){
-        Intent intent = new Intent(this,PatternActivity.class);
-        intent.putExtra("Pattern","SingletonBean.java");
-        intent.putExtra("Title","单例模式");
-        startActivity(intent);
+        gotoPatternAct("SingletonBean.java", "单例模式");
     }
 
     /**
@@ -32,10 +29,7 @@ public class MainActivity extends AppCompatActivity {
      */
     @OnClick(R.id.button2)
     public void onClickFactoryPattern(){
-        Intent intent = new Intent(this,PatternActivity.class);
-        intent.putExtra("Pattern","FactoryPattern.java");
-        intent.putExtra("Title","工厂模式");
-        startActivity(intent);
+        gotoPatternAct("FactoryPattern.java", "工厂模式");
     }
 
     /**
@@ -43,10 +37,7 @@ public class MainActivity extends AppCompatActivity {
      */
     @OnClick(R.id.button4)
     public void onClickTemplateMethodPattern(){
-        Intent intent = new Intent(this,PatternActivity.class);
-        intent.putExtra("Pattern","TemplateMethodPattern.java");
-        intent.putExtra("Title","模板方法模式");
-        startActivity(intent);
+        gotoPatternAct("TemplateMethodPattern.java", "模板方法模式");
     }
 
     /**
@@ -54,10 +45,7 @@ public class MainActivity extends AppCompatActivity {
      */
     @OnClick(R.id.button3)
     public void onClickBuildPattern(){
-        Intent intent = new Intent(this,PatternActivity.class);
-        intent.putExtra("Pattern","BuilderPattern.java");
-        intent.putExtra("Title","建造者模式");
-        startActivity(intent);
+        gotoPatternAct("BuilderPattern.java", "建造者模式");
     }
 
     /**
@@ -65,10 +53,7 @@ public class MainActivity extends AppCompatActivity {
      */
     @OnClick(R.id.button5)
     public void onClickProxyPattern(){
-        Intent intent = new Intent(this,PatternActivity.class);
-        intent.putExtra("Pattern","ProxyPattern.java");
-        intent.putExtra("Title","代理模式");
-        startActivity(intent);
+        gotoPatternAct("ProxyPattern.java", "代理模式");
     }
 
     /**
@@ -76,10 +61,7 @@ public class MainActivity extends AppCompatActivity {
      */
     @OnClick(R.id.button6)
     public void onClickPrototypePattern(){
-        Intent intent = new Intent(this,PatternActivity.class);
-        intent.putExtra("Pattern","PrototypePattern.java");
-        intent.putExtra("Title","原型模式");
-        startActivity(intent);
+        gotoPatternAct("PrototypePattern.java", "原型模式");
     }
 
     /**
@@ -87,20 +69,14 @@ public class MainActivity extends AppCompatActivity {
      */
     @OnClick(R.id.button7)
     public void onClickMediatorPattern(){
-        Intent intent = new Intent(this,PatternActivity.class);
-        intent.putExtra("Pattern","MediatorPattern.java");
-        intent.putExtra("Title","中介者模式");
-        startActivity(intent);
+        gotoPatternAct("MediatorPattern.java", "中介者模式");
     }
     /**
      * 命令模式
      */
     @OnClick(R.id.button8)
     public void onClickCommandPattern(){
-        Intent intent = new Intent(this,PatternActivity.class);
-        intent.putExtra("Pattern","CommandPattern.java");
-        intent.putExtra("Title","命令模式");
-        startActivity(intent);
+        gotoPatternAct("CommandPattern.java", "命令模式");
     }
 
     /**
@@ -108,9 +84,59 @@ public class MainActivity extends AppCompatActivity {
      */
     @OnClick(R.id.button9)
     public void onClickChainPattern(){
-        Intent intent = new Intent(this,PatternActivity.class);
-        intent.putExtra("Pattern","ChainPattern.java");
-        intent.putExtra("Title","责任链模式");
+        gotoPatternAct("ChainPattern.java", "责任链模式");
+    }
+
+    /**
+     * 装饰模式
+     */
+    @OnClick(R.id.button10)
+    public void onClickDecortorPattern(){
+        gotoPatternAct("DecoratorPattern.java", "装饰模式");
+    }
+
+    /**
+     * 策略模式
+     */
+    @OnClick(R.id.button11)
+    public void onClickStrategyPattern(){
+        gotoPatternAct("StrategyPattern.java", "策略模式");
+    }
+
+
+    /**
+     * 适配器模式
+     */
+    @OnClick(R.id.button12)
+    public void onClickAdapterPattern(){
+        gotoPatternAct("AdapterPattern.java", "适配器模式");
+    }
+    /**
+     * 迭代器模式
+     */
+    @OnClick(R.id.button13)
+    public void onClickIteratorPattern(){
+        gotoPatternAct("IteratorPattern.java", "迭代器模式");
+    }
+
+    /**
+     * 组合模式
+     */
+    @OnClick(R.id.button14)
+    public void onClickCompositePattern(){
+        gotoPatternAct("CompositePattern.java", "组合模式");
+    }
+    /**
+     * 观察者模式
+     */
+    @OnClick(R.id.button15)
+    public void onClickObserverPattern(){
+        gotoPatternAct("ObserverPattern.java", "观察者模式");
+    }
+    private void gotoPatternAct(String pattern, String title) {
+        Intent intent = new Intent(this, PatternActivity.class);
+        intent.putExtra("Pattern", pattern);
+        intent.putExtra("Title", title);
         startActivity(intent);
     }
 }

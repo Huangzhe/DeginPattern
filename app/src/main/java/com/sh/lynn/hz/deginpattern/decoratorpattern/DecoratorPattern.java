@@ -1,6 +1,9 @@
 package com.sh.lynn.hz.deginpattern.decoratorpattern;
 
+import static com.sh.lynn.hz.deginpattern.Utils.tempBuffer;
+
 /**
+ * 装饰模式
  * 定义：动态的给一个对象添加一些额外的职责。就增加功能来说，装饰模式相比生成子类更为灵活。
  * 四个角色：
  * Component 抽象构件 是一个接口或者抽象类，就是定义我们最核心的对象，也就是最原始的对象。
@@ -17,8 +20,14 @@ package com.sh.lynn.hz.deginpattern.decoratorpattern;
  * 需要扩展一个类的功能，或给一个类增加附加功能。
  * 需要动态地给一个对象增加功能，这些功能可以动态的撤销。
  * 需要为一批的兄弟类进行改装或加装功能。
- *  Created by hyz84 on 17/1/5.
+ * Created by hyz84 on 17/1/5.
  */
 
-public class DecoratorPatteern {
+public class DecoratorPattern {
+    public void doSomething() {
+        Component component = new ConcreteComponent();
+        component = new ConcreteDecorator1(component);
+        component = new ConcreteDecorator2(component);
+        tempBuffer.append(component.operate());
+    }
 }

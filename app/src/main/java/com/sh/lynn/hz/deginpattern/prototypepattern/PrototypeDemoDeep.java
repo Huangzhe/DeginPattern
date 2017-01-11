@@ -1,19 +1,20 @@
-package com.sh.lynn.hz.deginpattern.prototype;
+package com.sh.lynn.hz.deginpattern.prototypepattern;
 
 import java.util.ArrayList;
 
-/**
- * 浅拷贝
+/**深拷贝
  * Created by hyz84 on 16/12/19.
  */
 
-public class PrototypeDemo implements Cloneable {
+public class PrototypeDemoDeep implements Cloneable {
+
     private ArrayList<String> mArrayList = new ArrayList<>();
     @Override
-    public PrototypeDemo clone() throws CloneNotSupportedException {
-        PrototypeDemo paper =null;
+    public PrototypeDemoDeep clone() throws CloneNotSupportedException {
+        PrototypeDemoDeep paper =null;
         try{
-            paper =(PrototypeDemo)  super.clone();
+            paper =(PrototypeDemoDeep)  super.clone();
+            paper.mArrayList =(ArrayList<String>)this.mArrayList.clone();
         }catch (Exception e){
             e.printStackTrace();
         }

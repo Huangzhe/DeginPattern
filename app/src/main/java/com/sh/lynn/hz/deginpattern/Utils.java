@@ -32,4 +32,5 @@ public class Utils {
         return buffer.toString();
     }
 
+    public static StringBuffer tempBuffer = new StringBuffer();
 }

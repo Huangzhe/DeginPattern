@@ -1,5 +1,7 @@
 package com.sh.lynn.hz.deginpattern.commandpattern;
 
+import static com.sh.lynn.hz.deginpattern.Utils.tempBuffer;
+
 /**
  * 命令模式：将一个请求封装成一个对象，从而让你使用不同的请求把客户端参数化，
  * 对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。
@@ -13,7 +15,7 @@ package com.sh.lynn.hz.deginpattern.commandpattern;
 public class CommandPattern {
 
 
-    public String doSomething(){
+    public void doSomething(){
         //声明调用者Invoker
         Invoker invoker  = new Invoker();
         //定义接收者
@@ -28,6 +30,6 @@ public class CommandPattern {
         Command command2 = new ConcreteCommand2(receiver2);
         invoker.setCommand(command2);
         String result2 =  invoker.action();
-        return result1+"\n"+result2;
+        tempBuffer.append( result1+"\n"+result2);
     }
 }

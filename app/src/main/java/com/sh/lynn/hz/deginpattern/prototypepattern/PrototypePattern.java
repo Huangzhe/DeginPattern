@@ -1,6 +1,8 @@
-package com.sh.lynn.hz.deginpattern.prototype;
+package com.sh.lynn.hz.deginpattern.prototypepattern;
 
 import java.util.ArrayList;
+
+import static com.sh.lynn.hz.deginpattern.Utils.tempBuffer;
 
 /**
  * 原型模式（Prototype Pattern）:用原型实例指定创建对象的种类，并且通过拷贝这个原型创建新的对象。
@@ -15,27 +17,27 @@ import java.util.ArrayList;
  */
 
 public class PrototypePattern {
-    /**
-     * 基本用法
-     */
-    public class PrototypeClass implements Cloneable{
-        @Override
-        public PrototypeClass clone() throws CloneNotSupportedException {
-            PrototypeClass prototypeClass =null;
-            try{
-                prototypeClass =(PrototypeClass)  super.clone();
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-            return prototypeClass;
-        }
-    }
+//    /**
+//     * 基本用法
+//     */
+//    public class PrototypeClass implements Cloneable{
+//        @Override
+//        public PrototypeClass clone() throws CloneNotSupportedException {
+//            PrototypeClass prototypeClass =null;
+//            try{
+//                prototypeClass =(PrototypeClass)  super.clone();
+//            }catch (Exception e){
+//                e.printStackTrace();
+//            }
+//            return prototypeClass;
+//        }
+//    }
 
     /**
      *
      * @return
      */
-    public String getCloneText (){
+    public void getCloneText (){
         PrototypeDemo prototypeDemo = new PrototypeDemo();
         prototypeDemo.setValue("Hello!");
         try {
@@ -44,20 +46,20 @@ public class PrototypePattern {
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
-        StringBuffer stringBuffer = new StringBuffer();
 
+        tempBuffer.append("浅拷贝：");
         ArrayList<String>  list= prototypeDemo.getValue();
         for (String text:list){
-            stringBuffer.append(text+"  ");
+            tempBuffer.append(text+"  ");
         }
-        return stringBuffer.toString();
+        tempBuffer.append("\n");
     }
 
     /**
      * 深拷贝
      * @return
      */
-    public String getCloneTextDeep (){
+    public void getCloneTextDeep (){
         PrototypeDemoDeep prototypeDemo = new PrototypeDemoDeep();
         prototypeDemo.setValue("Hello!");
         try {
@@ -66,12 +68,11 @@ public class PrototypePattern {
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
-        StringBuffer stringBuffer = new StringBuffer();
-
+        tempBuffer.append("深拷贝：");
         ArrayList<String>  list= prototypeDemo.getValue();
         for (String text:list){
-            stringBuffer.append(text+"  ");
+            tempBuffer.append(text+"  ");
         }
-        return stringBuffer.toString();
+        tempBuffer.append("\n");
     }
 }

@@ -12,7 +12,7 @@
     android:scrollbarStyle="insideOverlay"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.sh.lynn.hz.deginpattern.PatternActivity"
-    tools:showIn="@layout/activity_singleton">
+    tools:showIn="@layout/activity_pattern">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
@@ -43,20 +43,28 @@
 
     </HorizontalScrollView>
         <LinearLayout
-            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <Button
-                android:text="运行"
+                android:layout_marginBottom="5dp"
+                android:text="运行:"
                 android:id="@+id/btn_excu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         <TextView
+            android:padding="5dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center_vertical"
             android:id="@+id/tv_result"
             android:text="代码运行结果:"
             android:textSize="14sp"
+            android:minHeight="80dp"
             android:textColor="@android:color/holo_purple"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         </LinearLayout>
     </LinearLayout>
