@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_uieffect"
+    android:id="@+id/activity_net_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -11,16 +10,17 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.sh.lynn.hz.developbox.uieffect.UIEffectActivity"
-    tools:showIn="@layout/activity_uieffect">
-
+    tools:context="com.sh.lynn.hz.developbox.netframe.NetFrameActivity">
+<Button
+    android:text="Volley框架"
+    android:id="@+id/btn_volley"
+    style="@style/btn_list"/>
     <Button
-        android:text="沉浸式状态条"
-        style="@style/btn_list"
-        android:id="@+id/btn_appbar"/>
+        android:text="okHttp框架"
+        android:id="@+id/btn_okhttp"
+        style="@style/btn_list"/>
     <Button
-        android:text="下拉刷新的ListView"
-        style="@style/btn_list"
-        android:id="@+id/btn_listView"/>
+        android:text="retrofit框架"
+        android:id="@+id/btn_retrofit"
+        style="@style/btn_list"/>
 </LinearLayout>

@@ -32,8 +32,15 @@
         </activity>
         <activity android:name=".BaseActivity">
         </activity>
-        <activity android:name=".uieffect.appbar.ColToolBarActivity"
-                  android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".uieffect.appbar.ColToolBarActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".uieffect.listview.ListActivity"
+            android:label="下拉刷新">
+        </activity>
+        <activity android:name=".netframe.NetFrameActivity">
+        </activity>
     </application>
 
 </manifest>

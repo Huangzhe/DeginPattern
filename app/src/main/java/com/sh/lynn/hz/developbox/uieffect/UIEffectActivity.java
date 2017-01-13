@@ -6,6 +6,7 @@ import android.support.v7.widget.Toolbar;
 import com.sh.lynn.hz.developbox.BaseActivity;
 import com.sh.lynn.hz.developbox.R;
 import com.sh.lynn.hz.developbox.uieffect.appbar.ColToolBarActivity;
+import com.sh.lynn.hz.developbox.uieffect.listview.ListActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -27,5 +28,13 @@ public class UIEffectActivity extends BaseActivity {
     @OnClick(R.id.btn_appbar)
     public void onClickAppbar(){
         gotoAct(ColToolBarActivity.class);
+    }
+
+    /**
+     * 跳转UI特效
+     */
+    @OnClick(R.id.btn_listView)
+    public void onClickListView(){
+        gotoAct(ListActivity.class);
     }
 }
