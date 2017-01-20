@@ -111,8 +111,12 @@ public class RequestHelper {
                 EventBus.getDefault().post(base);
             }
         };
-
+//        ArrayMap map = new ArrayMap();
+//        map.put("showapi_appid", "30978");
+//        map.put("showapi_sign", "7a1b389d30e547aea07908aaf8826d9b");
         JSRequest request = new JSRequest(method, url, param, listener, errorListener);
+        //request.setHeaders(map);
+        Log.e("JSRequest",param.toString());
         request.setTag(tag);
         request.setRetryPolicy(retryPolicy);
         request.setSendCookie(cookie);

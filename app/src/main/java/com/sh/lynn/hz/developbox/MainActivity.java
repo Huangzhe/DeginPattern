@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 import com.sh.lynn.hz.developbox.deginpattern.PatternTypeActivity;
+import com.sh.lynn.hz.developbox.netframe.volleyutil.VolleyDemoActivity;
 import com.sh.lynn.hz.developbox.uieffect.UIEffectActivity;
 
 import butterknife.ButterKnife;
@@ -26,6 +27,13 @@ public class MainActivity extends BaseActivity {
     @OnClick(R.id.btn_ui_effect)
     public void onClickUIEffect(){
         gotoAct(UIEffectActivity.class);
+    }
+    /**
+     * 跳转UI特效
+     */
+    @OnClick(R.id.btn_net_frame)
+    public void onClickNetFrame(){
+        gotoAct(VolleyDemoActivity.class);
     }
 
     /**

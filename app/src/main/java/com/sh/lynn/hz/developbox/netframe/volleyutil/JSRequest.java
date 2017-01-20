@@ -1,5 +1,6 @@
 package com.sh.lynn.hz.developbox.netframe.volleyutil;
 
+import android.util.ArrayMap;
 import android.util.Log;
 
 import com.android.volley.AuthFailureError;
@@ -77,5 +78,9 @@ public class JSRequest extends JsonObjectRequest {
 
     public void setSendCookie(String cookie){
         sendHeader.put("Cookie",cookie);
+    }
+    public void setHeaders(ArrayMap<String,String> map){
+        sendHeader.putAll(map);
+        //sendHeader.put("Cookie",cookie);
     }
 }

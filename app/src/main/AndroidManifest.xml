@@ -2,13 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.sh.lynn.hz.developbox">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".deginpattern.PatternTypeActivity">
+
         </activity>
         <activity
             android:name=".deginpattern.PatternActivity"
@@ -40,6 +43,8 @@
             android:label="下拉刷新">
         </activity>
         <activity android:name=".netframe.NetFrameActivity">
+        </activity>
+        <activity android:name=".netframe.volleyutil.VolleyDemoActivity">
         </activity>
     </application>
 

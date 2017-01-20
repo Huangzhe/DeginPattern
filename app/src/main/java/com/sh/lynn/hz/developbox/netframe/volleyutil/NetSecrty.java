@@ -1,13 +1,7 @@
 package com.sh.lynn.hz.developbox.netframe.volleyutil;
 
 import android.text.TextUtils;
-import android.util.Log;
 
-import com.sh.yirisheng.yijiaren.yrsheng_yijiaren.base.Config;
-import com.sh.yirisheng.yijiaren.yrsheng_yijiaren.utils.Des3;
-import com.sh.yirisheng.yijiaren.yrsheng_yijiaren.utils.Md5;
-
-import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -22,19 +16,19 @@ public class NetSecrty {
             return null;
         }
         JSONObject json = new JSONObject();
-        try {
-            String content =  Des3.encode(param.toString(), Config.CLIENT_KEY);
-            String sign = Md5.getMd5(Config.CLIENT_ID+content+ Md5.getMd5(Config.CLIENT_KEY));
-            json.putOpt("client_id", Config.CLIENT_ID);
-            json.putOpt("content",content);
-            json.putOpt("sign",sign);
+      //  try {
+          //  String content =  Des3.encode(param.toString(), Config.CLIENT_KEY);
+//            String sign = Md5.getMd5(Config.CLIENT_ID+content+ Md5.getMd5(Config.CLIENT_KEY));
+//            json.putOpt("client_id", Config.CLIENT_ID);
+          //  json.putOpt("content",content);
+         //   json.putOpt("sign",sign);
             return json;
-        } catch (JSONException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return null;
     }
 
     /**解密响应数据
@@ -47,27 +41,27 @@ public class NetSecrty {
             result.setErr_msg(response.optString("return_msg"));//错误消息
         }else{//解析内部数据
             String secrytyConent = response.optString("content");
-            try {
-                String content = Des3.decode(secrytyConent,Config.CLIENT_KEY);
-                if (Config.tag > 1) Log.d("decode content", content);
-                JSONObject param = new JSONObject(content);
-                //通讯数据
-                if (!"SUCCESS".equals(param.optString("return_code")) ){
-                    result.setErr_msg(param.optString("return_msg"));//错误消息
-                }else{
-                    //业务数据
-                    if ("SUCCESS".equals(param.optString("result_code"))){
-                        result.setState(NetResult.CODE_OK);
-                        result.setContent(param);
-                    }else{
-                        result.setErr_code(param.optString("err_code"));
-                        result.setErr_msg(param.optString("result_msg"));
-                    }
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-                result.setErr_msg("解析错误:0");
-            }
+//            try {
+//                String content = Des3.decode(secrytyConent,Config.CLIENT_KEY);
+//                if (Config.tag > 1) Log.d("decode content", content);
+//                JSONObject param = new JSONObject(content);
+//                //通讯数据
+//                if (!"SUCCESS".equals(param.optString("return_code")) ){
+//                    result.setErr_msg(param.optString("return_msg"));//错误消息
+//                }else{
+//                    //业务数据
+//                    if ("SUCCESS".equals(param.optString("result_code"))){
+//                        result.setState(NetResult.CODE_OK);
+//                        result.setContent(param);
+//                    }else{
+//                        result.setErr_code(param.optString("err_code"));
+//                        result.setErr_msg(param.optString("result_msg"));
+//                    }
+//                }
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//                result.setErr_msg("解析错误:0");
+//            }
         }
         return result;
     }

@@ -3,4 +3,8 @@
     <string name="title_activity_singleton">SingletonActivity</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_uieffect">UIEffectActivity</string>
+
+    <string name="no_internet">无网络连接~！</string>
+    <string name="generic_server_down">连接服务器失败~！</string>
+    <string name="generic_error">网络异常,请稍后再试~！</string>
 </resources>
