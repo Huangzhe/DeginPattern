@@ -144,6 +144,9 @@ public class PatternTypeActivity extends AppCompatActivity {
         gotoPatternAct("FacadePattern.java", "门面模式");
     }
 
+    @OnClick(R.id.button17)
+    public void onClickMementoPattern(){gotoPatternAct("MementoPattern.java","备忘录模式");}
+
     private void gotoPatternAct(String pattern, String title) {
         Intent intent = new Intent(this, PatternActivity.class);
         intent.putExtra("Pattern", pattern);

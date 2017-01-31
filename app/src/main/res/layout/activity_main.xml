@@ -124,7 +124,7 @@
         android:layout_alignEnd="@+id/button13"/>
 
     <Button
-        android:text="Button"
+        android:text="备忘录模式"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/button16"

@@ -10,17 +10,17 @@ import static com.sh.lynn.hz.developbox.utils.Utils.tempBuffer;
 public class SubSystem {
     public static class ClassA{
         public void doSomething(){
-            tempBuffer.append("classA A A 。。。");
+            tempBuffer.append("classA A A 。。。\n");
         }
     }
     public static class ClassB{
         public void doSomething(){
-            tempBuffer.append("classB B B 。。。");
+            tempBuffer.append("classB B B 。。。\n");
         }
     }
     public static class ClassC{
         public void doSomething(){
-            tempBuffer.append("classC C C 。。。");
+            tempBuffer.append("classC C C 。。。\n");
         }
     }
 }
