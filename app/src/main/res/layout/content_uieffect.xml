@@ -23,4 +23,12 @@
         android:text="下拉刷新的ListView"
         style="@style/btn_list"
         android:id="@+id/btn_listView"/>
+    <Button
+        android:text="侧滑删除按钮RecyleView"
+        style="@style/btn_list"
+        android:id="@+id/btn_dropRecyleView"/>
+    <Button
+        android:text="自定义图表"
+        style="@style/btn_list"
+        android:id="@+id/btn_constomView"/>
 </LinearLayout>

@@ -6,6 +6,7 @@ import android.support.v7.widget.Toolbar;
 import com.sh.lynn.hz.developbox.BaseActivity;
 import com.sh.lynn.hz.developbox.R;
 import com.sh.lynn.hz.developbox.uieffect.appbar.ColToolBarActivity;
+import com.sh.lynn.hz.developbox.uieffect.customview.ChartViewActivity;
 import com.sh.lynn.hz.developbox.uieffect.listview.ListActivity;
 
 import butterknife.ButterKnife;
@@ -36,5 +37,10 @@ public class UIEffectActivity extends BaseActivity {
     @OnClick(R.id.btn_listView)
     public void onClickListView(){
         gotoAct(ListActivity.class);
+    }
+
+    @OnClick(R.id.btn_constomView)
+    public void onClickChartView(){
+        gotoAct(ChartViewActivity.class);
     }
 }
