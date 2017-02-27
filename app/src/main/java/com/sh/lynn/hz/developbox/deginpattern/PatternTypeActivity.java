@@ -144,6 +144,23 @@ public class PatternTypeActivity extends AppCompatActivity {
         gotoPatternAct("FacadePattern.java", "门面模式");
     }
 
+    @OnClick(R.id.button17)
+    public void onClickMementoPattern(){gotoPatternAct("MementoPattern.java","备忘录模式");}
+    @OnClick(R.id.button18)
+    public void onClickVisitorPattern(){gotoPatternAct("VisitorPattern.java","访问者模式");}
+    @OnClick(R.id.button19)
+    public void onClickStatePattern(){gotoPatternAct("StatePattern.java","状态模式");}
+
+    @OnClick(R.id.button20)
+    public void onClickInterpreterPattern(){gotoPatternAct("InterpreterPattern.java","解释器模式");}
+
+       @OnClick(R.id.button21)
+    public void onClickFlyweightPattern(){gotoPatternAct("FlyweightPattern.java","享元模式");}
+
+    @OnClick(R.id.button22)
+    public void onClickBridgePattern(){gotoPatternAct("BridgePattern.java","桥梁模式");}
+
+
     private void gotoPatternAct(String pattern, String title) {
         Intent intent = new Intent(this, PatternActivity.class);
         intent.putExtra("Pattern", pattern);

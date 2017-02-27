@@ -3,9 +3,11 @@ package com.sh.lynn.hz.developbox.deginpattern;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.nostra13.universalimageloader.utils.L;
 import com.sh.lynn.hz.developbox.R;
 import com.sh.lynn.hz.developbox.utils.Utils;
 
@@ -56,24 +58,26 @@ public class PatternActivity extends AppCompatActivity {
 
     private void setText(String className) {
         try {
-            Class cls = Class.forName(getPackageName() + "." + className.toLowerCase() + "." + className);
+            Class cls = Class.forName(getPackageName() + ".deginpattern." + className.toLowerCase() + "." + className);
             Object obj = cls.newInstance();
-            // Method method = cls.getMethod("excuExample");
+//           Method method = cls.getMethod("excuExample");
             Method[] methods = cls.getMethods();
             for (Method method : methods) {
 
-                if (method.getDeclaringClass().getName().contains(className))
+                if (method.getDeclaringClass().getName().contains(className)&&method.getParameterTypes().length==0)
                     method.invoke(obj);
             }
             tv_result.setText(tempBuffer.toString());
-            tv_result.setHeight(2 * 80);
+            int len = tempBuffer.toString().split("\\\n").length;
+            Log.e("tempBuffer",len+"");
+            tv_result.setHeight((len>2?len:2) * 50);
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch (InvocationTargetException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
