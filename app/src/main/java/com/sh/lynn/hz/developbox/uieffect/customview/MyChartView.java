@@ -14,7 +14,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.hankkin.mycartdemo.R;
+import com.sh.lynn.hz.developbox.R;
 
 import java.util.ArrayList;
 import java.util.List;

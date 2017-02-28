@@ -1,6 +1,7 @@
 package com.sh.lynn.hz.developbox.netframe.okhttp;
 
-import com.yrs.wftool.base.App;
+
+import com.sh.lynn.hz.developbox.App;
 
 import java.util.List;
 

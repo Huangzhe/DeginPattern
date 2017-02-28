@@ -30,7 +30,7 @@ private BrokenlineView mBrokenlineView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_chart_view);
 
        // myChartView = (MyChartView) findViewById(R.id.my_chart_view);
 //        initChatView();

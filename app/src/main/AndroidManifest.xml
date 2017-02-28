@@ -3,6 +3,7 @@
           package="com.sh.lynn.hz.developbox">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -11,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".deginpattern.PatternTypeActivity">
-
         </activity>
         <activity
             android:name=".deginpattern.PatternActivity"
@@ -45,6 +45,9 @@
         <activity android:name=".netframe.NetFrameActivity">
         </activity>
         <activity android:name=".netframe.volleyutil.VolleyDemoActivity">
+        </activity>
+        <activity android:name=".uieffect.customview.ChartViewActivity"/>
+        <activity android:name=".uieffect.recyleview.RecyleViewActivity">
         </activity>
     </application>
 
