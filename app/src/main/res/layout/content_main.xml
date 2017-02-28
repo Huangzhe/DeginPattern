@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sh.lynn.hz.developbox.MainActivity"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_main2">
+    <TextView
+        android:text="可演示"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:text="设计模式"
+        style="@style/btn_list"
+        android:id="@+id/btn_designpattern"/>
+
+    <Button
+        android:text="UI特效"
+        style="@style/btn_list"
+        android:id="@+id/btn_ui_effect"/>
+    <Button
+        android:text="网络框架"
+        style="@style/btn_list"
+        android:id="@+id/btn_net_frame"/>
+<View
+    android:layout_marginBottom="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@android:color/holo_purple"
+    />
+    <TextView
+        android:layout_marginBottom="5dp"
+        android:textColor="@android:color/holo_purple"
+        android:text="不可演示"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:gravity="center"
+        android:minHeight="50dp"
+        android:id="@+id/tv_logframe"
+        android:text="日志处理框架"
+        style="@style/btn_list"/>
+
+</LinearLayout>

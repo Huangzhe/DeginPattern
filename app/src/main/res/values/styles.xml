@@ -17,4 +17,28 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
+    <style name="btn_list">
+        <item name="android:background">@mipmap/bg_list</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <declare-styleable name="MyChartView">
+        <attr name="leftColor" format="color"></attr>
+        <attr name="leftColorBottom" format="color"></attr>
+        <attr name="selectLeftColor" format="color"></attr>
+        <attr name="rightColor" format="color"></attr>
+        <attr name="rightColorBottom" format="color"></attr>
+        <attr name="selectRightColor" format="color"></attr>
+        <attr name="xyColor" format="color"></attr>
+
+        <attr name="lineColor" format="color"></attr>
+        <attr name="bodyColor" format="color"></attr>
+        <attr name="textColor" format="color"></attr>
+        <attr name="x_axis" format="integer"></attr>
+        <attr name="y_axis" format="integer"></attr>
+
+
+    </declare-styleable>
 </resources>
