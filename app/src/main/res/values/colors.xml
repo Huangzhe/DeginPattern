@@ -6,4 +6,5 @@
     <color name="colorBackground">#87CEFA</color>
     <color name="transparent_white">#40ffffff</color>
     <color name="zmxy">#009393</color>
+    <color name="textColor">#ffffff</color>
 </resources>

@@ -43,4 +43,9 @@ public class UIEffectActivity extends BaseActivity {
     public void onClickChartView(){
         gotoAct(ChartViewActivity.class);
     }
+
+    @OnClick(R.id.btn_changeSkin)
+    public void onClickChangeSkin(){
+        gotoAct(SkinActivity.class);
+    }
 }

@@ -15,11 +15,13 @@ import com.sh.lynn.hz.developbox.uieffect.bitmaputils.ImageDownload;
 import com.sh.lynn.hz.developbox.uieffect.bitmaputils.ImageDownloadTask;
 import com.sh.lynn.hz.developbox.utils.TranMd5FileNameGenerator;
 
+import solid.ren.skinlibrary.base.SkinBaseApplication;
+
 /**
  * Created by hyz84 on 17/1/13.
  */
 
-public class App extends Application {
+public class App extends SkinBaseApplication {
     public static App app;
     public static synchronized App getInstance() {
         if (app == null) {

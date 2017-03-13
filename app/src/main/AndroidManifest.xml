@@ -49,6 +49,11 @@
         <activity android:name=".uieffect.customview.ChartViewActivity"/>
         <activity android:name=".uieffect.recyleview.RecyleViewActivity">
         </activity>
+        <activity
+            android:name=".uieffect.SkinActivity"
+            android:label="@string/title_activity_skin"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

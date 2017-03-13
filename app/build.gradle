@@ -26,17 +26,20 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    //下拉刷新
+    //volley
+    //EventBUS
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile 'com.jakewharton:butterknife:8.4.0'
     compile 'com.android.support:design:25.0.0'
+    compile 'com.huxq17.xrefreshview:xrefreshview:3.5.2'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.solid.skin:skinlibrary:1.4.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
     testCompile 'junit:junit:4.12'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
-    //下拉刷新
-    compile 'com.huxq17.xrefreshview:xrefreshview:3.5.2'
-    //volley
-    compile 'com.android.volley:volley:1.0.0'
-    //EventBUS
-    compile 'org.greenrobot:eventbus:3.0.0'
-    compile 'com.google.code.gson:gson:2.7'
 }
