@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -99,25 +100,33 @@ public class BrokenlineView extends View {
             canvas.drawLine(0f, mHeight - x * x_axis / index, mWidth, mHeight - x * mHeight / 2 / index, bodyPaint);
             canvas.drawText(-(int) ((index - x) * x_axis / (index * ratio)) + "", 5f, mHeight - x * x_axis / index - 8f, textPaint);
         }
+
+
         //画X轴
         bodyPaint.setColor(Color.BLACK);
         canvas.drawLine(0f, x_axis, mWidth, x_axis, bodyPaint);
 
        //画折线
         for (int x = 0; x < points.size(); x++) {
+
             Log.e(TAG, "points" + points.get(x));
             //将坐标全部还原成正值
             float point = points.get(x) + max_y_axis;
-            //绘制坐标点
+            if(x==0) {
+                path.moveTo((float) x * mSize, mHeight - ratio * point);
+
+
+            }//绘制坐标点
             canvas.drawCircle((float) x * mSize, mHeight - ratio * point, 4f, linePaint);
-            if (x < points.size() - 1)
+            if (x < points.size() - 1) {
+                path.lineTo((float) x * mSize, (mHeight - ratio * point));
                 //画折线
-                canvas.drawLine((float) x * mSize, (mHeight - ratio * point), (float) (x + 1) * mSize, (mHeight - ratio * (points.get(x + 1) + max_y_axis)), linePaint);
-
-
+                // canvas.drawLine((float) x * mSize, (mHeight - ratio * point), (float) (x + 1) * mSize, (mHeight - ratio * (points.get(x + 1) + max_y_axis)), linePaint);
+                //path.lineTo((float) (x + 1) * mSize, (mHeight - ratio * (points.get(x + 1) + max_y_axis)));
+            }
         }
-
-
+        canvas.drawPath(path, linePaint);
+        path.reset();
     }
 
     /**
@@ -193,7 +202,7 @@ public class BrokenlineView extends View {
 
     }
 
-
+    Path path;
     //初始化画笔
     private void init() {
         linePaint = new Paint();
@@ -204,7 +213,7 @@ public class BrokenlineView extends View {
 
         textPaint = new Paint();
         textPaint.setAntiAlias(true);
-
+         path = new Path();
     }
 
     /**
